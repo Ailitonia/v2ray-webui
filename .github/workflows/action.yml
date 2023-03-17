@@ -18,8 +18,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16
-    - run: npm ci
-    - run: npm test
 
     - name: Set up Go 1.17
       uses: actions/setup-go@v2
@@ -51,7 +49,6 @@ jobs:
       with:
             name: v2ray-webui-master-arm.tar.gz
             path: v2ray-webui-master-arm.tar.gz
-            
 
-    - name: Test
+    - name: Go Test
       run: go test -v .
